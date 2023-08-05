@@ -1,4 +1,4 @@
-module.exports = function toReadable (number) {
+module.exports = function toReadable (num) {
   const numberToWords = (num) => {
   const numberWords = {
     0: "zero",
