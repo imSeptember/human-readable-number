@@ -41,21 +41,11 @@ const numberWords = {
     } else if (num < 1000) {
       const hundredsPlace = Math.floor(num / 100);
       const remainder = num % 100;
-      return numberWords[hundredsPlace] + " hundred" + (remainder !== 0 ? " and " + getWords(remainder) : "");
+      return numberWords[hundredsPlace] + " hundred and" + (remainder !== 0 ? " and " + getWords(remainder) : "");
     } else if (num < 1000000) {
       const thousandsPlace = Math.floor(num / 1000);
       const remainder = num % 1000;
-      return getWords(thousandsPlace) + " thousand" + (remainder !== 0 ? " " + getWords(remainder) : "");
-    } else {
-      return "Number is too large";
-    }
-  };
-
-  if (number < 0) {
-    return "negative " + getWords(Math.abs(number));
-  } else {
-    return getWords(number);
-  }
-
-    
+      return getWords(thousandsPlace) + " thousand and" + (remainder !== 0 ? " " + getWords(remainder) : "");
+    } 
+  }; 
   }
